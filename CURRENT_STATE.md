@@ -22,8 +22,8 @@ To ensure absolute scientific integrity, the research state is partitioned into 
 ### 1.2 Directly Inspected by Antigravity in Workspace
 - Foundational research records: [incoming/01_research_project_understanding.md](incoming/01_research_project_understanding.md) and [incoming/02_independent_scientific_audit.md](incoming/02_independent_scientific_audit.md) (both verified via SHA-256).
 - Archival and documentation copies in `docs/historical/`, `docs/01_discovery/`, and `docs/02_scientific_audit/`.
-- Local Git repository status: uninitialized (`fatal: not a git repository`).
-- GitHub CLI status: installed (`gh version 2.98.0`), unauthenticated.
+- Local Git repository status: Initialized on `main`, synchronized with private GitHub repository `https://github.com/asmkhalid111/glioma-fyp-research-hub`.
+- Multi-model collaboration framework: [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md), [MULTI_MODEL_REVIEW_PROTOCOL.md](MULTI_MODEL_REVIEW_PROTOCOL.md), [MULTI_MODEL_REVIEW_PROMPT.md](MULTI_MODEL_REVIEW_PROMPT.md), and [docs/ai_reviews/](docs/ai_reviews/README.md).
 - Absence of raw data files, patient-level records, or notebooks in the local workspace.
 
 ### 1.3 Reported But Unreproduced
@@ -122,6 +122,7 @@ Direct inspection of the `.py` script confirmed seven distinct technical flaws (
 | **Primary Data** | TCGA-LGG clinical & `star_tpm` files | Stored on Google Drive (referenced in `.py`) | `VERIFIED-CODE` |
 | **Primary Data** | TCGA-GBM clinical & `star_tpm` files | Stored on Google Drive (referenced in `.py`) | `VERIFIED-CODE` |
 | **Compute Platform** | Google Colaboratory (GPU type/quota unclear) | Used for Phase-I execution | `REPORTED` |
+| **Collaboration Infrastructure** | Multi-Model AI Review Protocol, Context Pack, Prompts & Archive | Established in repository | `VERIFIED-CODE` |
 | **External Validation Data** | Chinese Glioma Genome Atlas (CGGA `mRNAseq_693`, `mRNAseq_325`) | Download required; access terms and suitability unchecked | `UNVERIFIED` |
 | **Normal Tissue Data** | GTEx / recount-brain normal brain transcriptomes | Proposed by team; integration unchecked | `UNVERIFIED` |
 | **Personnel & Team** | Team size, individual member roles, author split | Unknown | `UNKNOWN` |
@@ -135,5 +136,7 @@ Direct inspection of the `.py` script confirmed seven distinct technical flaws (
 
 - **Discovery (Prompt 1):** Complete ([incoming/01_research_project_understanding.md](incoming/01_research_project_understanding.md)).
 - **Independent Scientific Audit (Prompt 2):** Complete ([incoming/02_independent_scientific_audit.md](incoming/02_independent_scientific_audit.md)).
+- **Multi-Model Collaboration Infrastructure:** Complete. [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md), [MULTI_MODEL_REVIEW_PROTOCOL.md](MULTI_MODEL_REVIEW_PROTOCOL.md), [MULTI_MODEL_REVIEW_PROMPT.md](MULTI_MODEL_REVIEW_PROMPT.md), and [docs/ai_reviews/](docs/ai_reviews/README.md) established.
 - **Phase II Execution Planning (Prompts 3–6):** Not started. Blocked pending Priority P0 data audit and supervisor checkpoint.
+- **Active Milestone:** **Milestone M0: Read-Only Data Feasibility Audit (Pending)**.
 - **Model Development / Training:** Halted. Prohibited until Milestone M0 is completed and verified.

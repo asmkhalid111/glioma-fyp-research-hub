@@ -64,8 +64,9 @@ When a new agent session starts, follow this protocol:
 
 ### Step 1: Ingest Context
 1. Read [AI_ONBOARDING_PROMPT.md](AI_ONBOARDING_PROMPT.md) for the concise executive summary.
-2. Review [CURRENT_STATE.md](CURRENT_STATE.md) for technical progress and active blockers.
-3. Review [DECISION_LOG.md](DECISION_LOG.md) to check which decisions remain open or pending supervisor approval.
+2. Read [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md) for the latest portable summary of project state, evidence, and open decisions.
+3. Review [CURRENT_STATE.md](CURRENT_STATE.md) for technical progress and active blockers.
+4. Review [DECISION_LOG.md](DECISION_LOG.md) to check which decisions remain open or pending supervisor approval.
 
 ### Step 2: Respect Project Gates
 - **Gate 0 (Current State):** No model training or algorithmic development may occur until Milestone M0 (Read-Only Data Audit) is completed.
@@ -86,3 +87,15 @@ All prospective modeling must report:
 3. **Statistical Uncertainty:** 95% Bootstrap Confidence Intervals ($B \ge 1,000$) or repeated nested CV variance across folds.
 4. **Baselines:** Always compare against simple elastic-net logistic regression and a clinical/molecular baseline (Age + IDH + 1p/19q alone) to quantify the marginal value of RNA-seq features.
 5. **Compliance:** Follow the **TRIPOD+AI** (Transparent Reporting of a multivariable prediction model of Individual Prognosis Or Diagnosis) reporting checklist for all publication outputs.
+
+---
+
+## 6. Multi-Model Collaboration & AI Review Rules
+
+When external AI models (via T3 Chat, Claude, ChatGPT, Gemini, etc.) are consulted:
+1. **Advisory Role Only:** External AI models provide independent advisory opinions, intellectual stress-testing, and peer critiques. They possess **zero authority** to approve hypotheses, finalize methodology, or modify canonical repository records.
+2. **Model Agreement is Not Proof:** Multiple AI models agreeing on a point does not constitute scientific evidence. Models may share common training-data heuristics or literature biases.
+3. **Canonical Authority:** The GitHub repository `glioma-fyp-research-hub` is the sole source of truth. Models must review materials grounded in [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md) pinned to a specific Git commit SHA.
+4. **No Silent Revisions:** Recommendations originating from AI reviews must be documented in [docs/ai_reviews/syntheses/](docs/ai_reviews/syntheses/) and formally submitted to the research supervisor before any change is made to canonical files.
+5. **Review Preservation:** All raw external model responses must be preserved in [docs/ai_reviews/incoming/](docs/ai_reviews/incoming/) and archived using [docs/templates/AI_REVIEW_RECORD_TEMPLATE.md](docs/templates/AI_REVIEW_RECORD_TEMPLATE.md).
+6. **Context Pack Maintenance:** [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md) must be refreshed following the protocol in [docs/templates/CONTEXT_PACK_UPDATE_PROCEDURE.md](docs/templates/CONTEXT_PACK_UPDATE_PROCEDURE.md) whenever milestones or decisions change.

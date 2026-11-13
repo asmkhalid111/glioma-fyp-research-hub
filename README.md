@@ -56,50 +56,75 @@ All statements, data points, and hypotheses in this repository strictly adhere t
 
 ---
 
-## 4. Repository Navigation & Structure
+## 4. Multi-Model AI Collaboration System
+
+To enable independent scientific peer critique without compromising data safety or repository integrity, this repository includes a multi-model AI collaboration infrastructure:
+
+- **Portable Research Context:** [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md) provides a compact, self-contained synthesis of the latest project state that can be supplied to external AI models (e.g. via T3 Chat, Claude, ChatGPT, Gemini).
+- **Collaboration Protocol:** [MULTI_MODEL_REVIEW_PROTOCOL.md](MULTI_MODEL_REVIEW_PROTOCOL.md) formalizes five independent review perspectives (Domain, Methodological, Statistical, Literature, and Adversarial) and enforces a strict evidence hierarchy (AI models provide advisory critiques, not ground truth).
+- **Standardized Review Prompt:** [MULTI_MODEL_REVIEW_PROMPT.md](MULTI_MODEL_REVIEW_PROMPT.md) provides a universal, model-agnostic prompt template to ensure consistent evaluation across different frontier AI systems.
+- **Review Archive:** All incoming and vetted model reviews are tracked and archived in [docs/ai_reviews/](docs/ai_reviews/README.md) with structured templates for individual reviews ([AI_REVIEW_RECORD_TEMPLATE.md](docs/templates/AI_REVIEW_RECORD_TEMPLATE.md)) and multi-model syntheses ([AI_REVIEW_SYNTHESIS_TEMPLATE.md](docs/templates/AI_REVIEW_SYNTHESIS_TEMPLATE.md)).
+
+---
+
+## 5. Repository Navigation & Structure
 
 ```
 FYDP-Research/
-├── README.md                   # Repository overview, epistemic status, and navigation (this file)
-├── AGENTS.md                   # Operating manual and epistemic discipline for autonomous agents
-├── AI_ONBOARDING_PROMPT.md     # Quick-start context prompt for new AI sessions
-├── CURRENT_STATE.md            # Comprehensive synthesis of current technical and empirical state
-├── RESEARCH_BLUEPRINT.md       # Scientific foundation, hypotheses, confounding analysis, and study design
-├── DECISION_LOG.md             # Record of decisions, open conflicts, and pending supervisor checkpoints
-├── EVIDENCE_REGISTER.md        # Catalog of code findings, literature (S1-S13), weaknesses (W1-W18)
-├── MILESTONE_REGISTER.md       # Research roadmap from M0 (Feasibility) to M8 (Manuscript)
-├── DATA_GOVERNANCE.md          # Data tiers, ethics, patient de-identification, and security protocol
-├── .gitignore                  # Git ignore rules protecting raw data, checkpoints, and secrets
-├── incoming/                   # Original historical input files (unabridged raw records)
+├── README.md                              # Repository overview, epistemic status, and navigation (this file)
+├── AGENTS.md                              # Operating manual and epistemic discipline for autonomous agents
+├── AI_CONTEXT_PACK.md                     # Portable research context pack for external AI models
+├── AI_ONBOARDING_PROMPT.md                # Quick-start context prompt for new AI sessions
+├── CURRENT_STATE.md                       # Comprehensive synthesis of current technical and empirical state
+├── DATA_GOVERNANCE.md                     # Data tiers, ethics, patient de-identification, and security protocol
+├── DECISION_LOG.md                        # Record of decisions, open conflicts, and pending supervisor checkpoints
+├── EVIDENCE_REGISTER.md                   # Catalog of code findings, literature (S1-S13), weaknesses (W1-W18)
+├── MILESTONE_REGISTER.md                  # Research roadmap from M0 (Feasibility) to M8 (Manuscript)
+├── MULTI_MODEL_REVIEW_PROTOCOL.md         # Multi-model review roles, procedures, and evidence hierarchy
+├── MULTI_MODEL_REVIEW_PROMPT.md           # Universal model-independent review prompt template
+├── RESEARCH_BLUEPRINT.md                  # Scientific foundation, hypotheses, confounding analysis, and study design
+├── .gitignore                             # Git ignore rules protecting raw data, checkpoints, and secrets
+├── incoming/                              # Original historical input files (unabridged raw records)
 │   ├── 01_research_project_understanding.md
 │   └── 02_independent_scientific_audit.md
 └── docs/
-    ├── historical/             # Exact bitwise preserved copies of initial foundational reports
+    ├── ai_reviews/                        # Multi-model review archive and collaboration hub
+    │   ├── README.md                      # Archive guidelines and T3 Chat workflow
+    │   ├── incoming/                      # Raw, unvetted external AI responses
+    │   ├── independent_reviews/           # Vetted reviews categorized by role (scientific, methodological, etc.)
+    │   └── syntheses/                     # Cross-model synthesis and reconciliation reports
+    ├── historical/                        # Exact bitwise preserved copies of initial foundational reports
     │   ├── 01_research_project_understanding.md
     │   └── 02_independent_scientific_audit.md
-    ├── 01_discovery/           # Preserved discovery report copy
+    ├── 01_discovery/                      # Preserved discovery report copy
     │   └── 01_research_project_understanding.md
-    ├── 02_scientific_audit/    # Preserved scientific audit report copy
+    ├── 02_scientific_audit/               # Preserved scientific audit report copy
     │   └── 02_independent_scientific_audit.md
-    ├── templates/              # Documentation and pre-registration templates
-    │   └── ANALYSIS_PLAN_TEMPLATE.md
-    └── data/                   # Genomic and clinical data documentation
+    ├── templates/                         # Research governance and review templates
+    │   ├── ANALYSIS_PLAN_TEMPLATE.md
+    │   ├── AI_REVIEW_RECORD_TEMPLATE.md
+    │   ├── AI_REVIEW_SYNTHESIS_TEMPLATE.md
+    │   └── CONTEXT_PACK_UPDATE_PROCEDURE.md
+    └── data/                              # Genomic and clinical data documentation
         └── DATASET_INVENTORY.md
 ```
 
 ### Document Cross-References (Repository-Relative Links):
 - Operational guidelines for agents: [AGENTS.md](AGENTS.md)
+- Portable research context pack: [AI_CONTEXT_PACK.md](AI_CONTEXT_PACK.md)
 - Context prompt for new AI sessions: [AI_ONBOARDING_PROMPT.md](AI_ONBOARDING_PROMPT.md)
 - Verified baseline and state of the codebase: [CURRENT_STATE.md](CURRENT_STATE.md)
 - Scientific methodology and proposed hypotheses: [RESEARCH_BLUEPRINT.md](RESEARCH_BLUEPRINT.md)
 - Decision log and pending supervisor checkpoints: [DECISION_LOG.md](DECISION_LOG.md)
 - Master evidence and literature register: [EVIDENCE_REGISTER.md](EVIDENCE_REGISTER.md)
 - Milestone roadmap and execution gates: [MILESTONE_REGISTER.md](MILESTONE_REGISTER.md)
+- Multi-model collaboration protocol: [MULTI_MODEL_REVIEW_PROTOCOL.md](MULTI_MODEL_REVIEW_PROTOCOL.md)
+- Reusable review prompt template: [MULTI_MODEL_REVIEW_PROMPT.md](MULTI_MODEL_REVIEW_PROMPT.md)
 - Data governance and ethics protocol: [DATA_GOVERNANCE.md](DATA_GOVERNANCE.md)
 
 ---
 
-## 5. Immediate Next Steps (Priority P0)
+## 6. Immediate Next Steps (Priority P0)
 
 Before executing any machine learning pipelines or modifying models:
 1. **Resolve Critical Questions:** Supervisor alignment on historical vs CNS5-approximate target labels, project scope (core vs optional objectives), and publication timeline (`01_understanding` §9).
