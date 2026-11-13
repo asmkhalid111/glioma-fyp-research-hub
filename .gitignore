@@ -1,0 +1,125 @@
+# ==============================================================================
+# Git Ignore Rules — FYDP Glioma RNA-seq Research Hub
+# ==============================================================================
+
+# Python environment and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# Local IDE and editor configurations
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Secrets, credentials, and authentication tokens
+.env
+.env.*
+*.pem
+*.key
+*.cert
+*credentials*
+*secret*
+token.txt
+access_token*
+agy_account*
+
+# Raw genomic, transcriptomic, and clinical data files (DO NOT COMMIT)
+# Raw data must reside exclusively on secure storage / Google Drive
+data/raw/
+data/processed/
+data/interim/
+*.tsv
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.rds
+*.RData
+*.tar.gz
+*.tar
+*.zip
+*.gz
+*star_tpm*
+*TCGA-LGG*.tsv
+*TCGA-LGG*.csv
+*TCGA-GBM*.tsv
+*TCGA-GBM*.csv
+*mRNAseq_693*.tsv
+*mRNAseq_693*.csv
+*mRNAseq_325*.tsv
+*mRNAseq_325*.csv
+
+# Explicitly preserve all sanitized documentation, registers, and markdown reports
+!*.md
+!**/*.md
+
+# Model checkpoints and heavy binary artifacts
+models/checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+
+# Temporary execution artifacts and caches
+tmp/
+temp/
+scratch/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
